@@ -1,0 +1,130 @@
+// Primary colors
+$primary-background: #317aa1;
+$primary-text: #ffffff;
+$primary-border: #317aa1;
+$primary-hover-background: #5a95b4;
+$primary-hover-text: #ffffff;
+$primary-hover-border: #5a95b4;
+$primary-active-background: #5a95b4;
+$primary-active-text: #adcad9;
+$primary-active-border: #5a95b4;
+// Secondary colors
+$secondary-background: transparent;
+$secondary-text: #317aa1;
+$secondary-border: #317aa1;
+$secondary-hover-background: #eaeced;
+$secondary-hover-text: #5a95b4;
+$secondary-hover-border: #5a95b4;
+$secondary-active-background: #eaeced;
+$secondary-active-text: #eaeced;
+$secondary-active-border: #5a95b4;
+// Tertiary colors
+$tertiary-background: transparent;
+$tertiary-text: #317aa1;
+$tertiary-border: transparent;
+$tertiary-hover-background: #d6e4ec;
+$tertiary-hover-text: red;
+$tertiary-hover-border: red;
+$tertiary-active-background: red;
+$tertiary-active-text: red;
+$tertiary-active-border: red;
+// Destructive colors
+$destructive-background: red;
+$destructive-text: red;
+$destructive-border: red;
+$destructive-hover-background: red;
+$destructive-hover-text: red;
+$destructive-hover-border: red;
+$destructive-active-background: red;
+$destructive-active-text: red;
+$destructive-active-border: red;
+
+// Values
+$font-size: 1rem;
+$padding: 0.5rem 1rem;
+$border-radius: 4px;
+$border-width: 2px;
+
+.button {
+  font-size: $font-size;
+  padding: $padding;
+  border-radius: $border-radius;
+  border: $border-width solid;
+
+  &.disabled,
+  :disabled {
+    opacity: 0.4;
+  }
+
+  &.primary {
+    background-color: $primary-background;
+    color: $primary-text;
+    border-color: $primary-border;
+
+    &:hover:not(:disabled, .disabled) {
+      background-color: $primary-hover-background;
+      color: $primary-hover-text;
+      border-color: $primary-hover-border;
+    }
+
+    &:active:not(:disabled, .disabled) {
+      background-color: $primary-active-background;
+      color: $primary-active-text;
+      border-color: $primary-active-border;
+    }
+  }
+
+  &.secondary {
+    background-color: $secondary-background;
+    color: $secondary-text;
+    border-color: $secondary-border;
+
+    &:hover:not(:disabled, .disabled) {
+      background-color: $secondary-hover-background;
+      color: $secondary-hover-text;
+      border-color: $secondary-hover-border;
+    }
+
+    &:active:not(:disabled, .disabled) {
+      background-color: $secondary-active-background;
+      color: $secondary-active-text;
+      border-color: $secondary-active-border;
+    }
+  }
+
+  &.tertiary {
+    background-color: $tertiary-background;
+    color: $tertiary-text;
+    border-color: $tertiary-border;
+
+    &:hover:not(:disabled, .disabled) {
+      background-color: $tertiary-hover-background;
+      color: $tertiary-hover-text;
+      border-color: $tertiary-hover-border;
+    }
+
+    &:active:not(:disabled, .disabled) {
+      background-color: $tertiary-active-background;
+      color: $tertiary-active-text;
+      border-color: $tertiary-active-border;
+    }
+  }
+
+  &.destructive {
+    background-color: $destructive-background;
+    color: $destructive-text;
+    border-color: $destructive-border;
+
+    &:hover:not(:disabled, .disabled) {
+      background-color: $destructive-hover-background;
+      color: $destructive-hover-text;
+      border-color: $destructive-hover-border;
+    }
+
+    &:active:not(:disabled, .disabled) {
+      background-color: $destructive-active-background;
+      color: $destructive-active-text;
+      border-color: $destructive-active-border;
+    }
+  }
+}
