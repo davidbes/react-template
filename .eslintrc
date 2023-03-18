@@ -29,7 +29,7 @@
       {
         "classPropertiesAllowed": false,
         "disallowPrototype": false,
-        "returnStyle": "explicit",
+        "returnStyle": "unchanged",
         "singleReturnOnly": false
       }
     ]
