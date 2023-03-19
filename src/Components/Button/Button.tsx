@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { Icon, IconName } from 'Components/Icon/Icon';
 import { FC, ButtonHTMLAttributes } from 'react';
 import { Link, To } from 'react-router-dom';
 import styles from './Button.module.scss';
@@ -10,8 +11,8 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   label?: string;
   className?: string;
   isLoading?: boolean;
-  leadingIcon?: 'string'; // TODO: change this when ICON is available
-  trailingIcon?: 'string'; // TODO: change this when ICON is available
+  leadingIcon?: IconName; // TODO: change this when ICON is available
+  trailingIcon?: IconName; // TODO: change this when ICON is available
 };
 
 export const Button: FC<ButtonProps> = ({
@@ -30,11 +31,15 @@ export const Button: FC<ButtonProps> = ({
   const content = (
     <>
       <div className={classNames(isLoading && styles.isLoading)}>
-        {leadingIcon && <div>icon-placeholder</div>}
+        {leadingIcon && <Icon icon={leadingIcon} />}
         {label && <span>{label}</span>}
-        {trailingIcon && <div>icon-placeholder</div>}
+        {trailingIcon && <Icon icon={trailingIcon} />}
       </div>
-      {isLoading && <div>loading-icon</div>}
+      {isLoading && (
+        <div>
+          <Icon icon={IconName.ChevronRight} />
+        </div>
+      )}
     </>
   );
 
